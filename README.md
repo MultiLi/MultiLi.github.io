@@ -1,118 +1,77 @@
-# Hyde
+![](_assets/images/documentation/chalk-intro@2x.png)
 
-Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+Chalk is a high quality, completely customizable, performant and 100% free blog template for Jekyll.
 
-![Hyde screenshot](https://f.cloud.github.com/assets/98681/1831228/42af6c6a-7384-11e3-98fb-e0b923ee0468.png)
+## Overview
 
+Features:
+  - Dark and Light theme.
+  - Filter on tags.
+  - customizable pagination.
+  - Beautified link sharing in Facebook and other social media.
+  - Automatic time to read post indicator.
+  - Automatic RSS feed.
+  - About page.
+  - 404 page.
+  - SEO optimized.
+  - PageSpeed optimized.
+  - Cross browser support (supports all modern browsers).
+  - Media embed for videos.
+  - Enlarge images on click (like Medium).
 
-## Contents
+Integrations
+  - [Google Analytics](https://analytics.google.com/analytics/web/)
+  - [Google Fonts](https://fonts.google.com/)
+  - [Disqus](https://disqus.com/)
+  - [Ionicons](http://ionicons.com/)
+  - Social media links
 
-- [Usage](#usage)
-- [Options](#options)
-  - [Sidebar menu](#sidebar-menu)
-  - [Sticky sidebar content](#sticky-sidebar-content)
-  - [Themes](#themes)
-  - [Reverse layout](#reverse-layout)
-- [Development](#development)
-- [Author](#author)
-- [License](#license)
-
+Used tools
+  - [Autoprefixer](https://github.com/postcss/autoprefixer)
+  - [Bower](http://bower.io/)
+  - [Circle CI](https://circleci.com/)
+  - [Html-proofer](https://github.com/gjtorikian/html-proofer)
+  - [Jekyll](http://jekyllrb.com/)
+  - [Jekyll assets](https://github.com/jekyll/jekyll-assets)
+  - [Jekyll Sitemap](https://github.com/jekyll/jekyll-sitemap)
+  - [HTML5 Boilerplate](https://html5boilerplate.com/) (Influenced by)
+  - [Kickster](http://kickster.nielsenramon.com/)
+  - [Retina.js](http://imulus.github.io/retinajs/)
+  - [STACSS](http://stacss.nielsenramon.com/)
 
 ## Usage
 
-Hyde is a theme built on top of [Poole](https://github.com/poole/poole), which provides a fully furnished Jekyll setup—just download and start the Jekyll server. See [the Poole usage guidelines](https://github.com/poole/poole#usage) for how to install and use Jekyll.
+### Installation
 
+If you haven't installed Ruby then go ahead and install it with: `brew install Ruby`.
+Next setup your environment:
 
-## Options
+    bin/setup
 
-Hyde includes some customizable options, typically applied via classes on the `<body>` element.
+### Development
 
+Run Jekyll:
 
-### Sidebar menu
+    bundle exec jekyll serve
 
-Create a list of nav links in the sidebar by assigning each Jekyll page the correct layout in the page's [front-matter](http://jekyllrb.com/docs/frontmatter/).
+### Deploy to GitHub Pages
 
-```
----
-layout: page
-title: About
----
-```
+Run this in the root project folder in your console:
 
-**Why require a specific layout?** Jekyll will return *all* pages, including the `atom.xml`, and with an alphabetical sort order. To ensure the first link is *Home*, we exclude the `index.html` page from this list by specifying the `page` layout.
+    bin/deploy
 
+You can find more info on how to use the gh-pages branch and a custom domain [here](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/).
 
-### Sticky sidebar content
-
-By default Hyde ships with a sidebar that affixes it's content to the bottom of the sidebar. You can optionally disable this by removing the `.sidebar-sticky` class from the sidebar's `.container`. Sidebar content will then normally flow from top to bottom.
-
-```html
-<!-- Default sidebar -->
-<div class="sidebar">
-  <div class="container sidebar-sticky">
-    ...
-  </div>
-</div>
-
-<!-- Modified sidebar -->
-<div class="sidebar">
-  <div class="container">
-    ...
-  </div>
-</div>
-```
-
-
-### Themes
-
-Hyde ships with eight optional themes based on the [base16 color scheme](https://github.com/chriskempson/base16). Apply a theme to change the color scheme (mostly applies to sidebar and links).
-
-![Hyde in red](https://f.cloud.github.com/assets/98681/1831229/42b0b354-7384-11e3-8462-31b8df193fe5.png)
-
-There are eight themes available at this time.
-
-![Hyde theme classes](https://f.cloud.github.com/assets/98681/1817044/e5b0ec06-6f68-11e3-83d7-acd1942797a1.png)
-
-To use a theme, add anyone of the available theme classes to the `<body>` element in the `default.html` layout, like so:
-
-```html
-<body class="theme-base-08">
-  ...
-</body>
-```
-
-To create your own theme, look to the Themes section of [included CSS file](https://github.com/poole/hyde/blob/master/public/css/hyde.css). Copy any existing theme (they're only a few lines of CSS), rename it, and change the provided colors.
-
-### Reverse layout
-
-![Hyde with reverse layout](https://f.cloud.github.com/assets/98681/1831230/42b0d3ac-7384-11e3-8d54-2065afd03f9e.png)
-
-Hyde's page orientation can be reversed with a single class.
-
-```html
-<body class="layout-reverse">
-  ...
-</body>
-```
-
-
-## Development
-
-Hyde has two branches, but only one is used for active development.
-
-- `master` for development.  **All pull requests should be submitted against `master`.**
-- `gh-pages` for our hosted site, which includes our analytics tracking code. **Please avoid using this branch.**
-
-
-## Author
-
-**Mark Otto**
-- <https://github.com/mdo>
-- <https://twitter.com/mdo>
-
+[View this](https://github.com/nielsenramon/kickster#automated-deployment-with-circle-ci) for more info about automated deployment with Circle CI.
 
 ## License
 
-Open sourced under the [MIT license](LICENSE.md).
+MIT License
 
-<3
+## Contributing
+
+1. Fork it ( https://github.com/[my-github-username]/chalk/fork )
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request

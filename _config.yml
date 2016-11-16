@@ -1,24 +1,63 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+# Mandatory settings
 
-# Permalinks
-permalink:        pretty
+name: Chalk
+paginate: 25
+paginate_path: "/posts/page/:num/"
+url: # add site url http://example.com/
+blog_theme: light # Or use dark
 
-# Setup
-title:            Hyde
-tagline:          'Excited'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
-baseurl:          /，
-author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+# Optional settings
 
-paginate:         5
+discus_identifier: # Add your Disqus identifier
+ga_analytics: # Add your GA Tracking Id
+rss_enabled: true # Change to false if not
+social:
+  dribbble: # Add your Dribbble handle
+  facebook: # Add your Facebook handle
+  github: # Add your GitHub handle
+  linkedin: # Add your LinkedIn handle
+  twitter: # Add your Twitter handle
+  email: # Add your Email address
+  bitcoin: # Add your Bitcoin link or address
 
-# Custom vars
-version:          2.1.0
+# Important settings (change at own risk)
 
-github:
-  repo:           https://github.com/poole/hyde
+assets:
+  compress:
+    css: true
+    js: true
+  features:
+    automatic_img_size: false
+  sources:
+    - _assets/bower
+    - _assets/fonts
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _vendor/
+collections:
+  my_tags:
+    output: true
+    permalink: /tag/:slug/
+defaults:
+  -
+    scope:
+      path: ""
+      type: my_tags
+    values:
+      layout: articles_by_tag
+exclude:
+  - .bowerrc
+  - .travis.yml
+  - bin/*
+  - bower.json
+  - circle.yml
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
+gems:
+  - jekyll-assets
+  - jekyll-paginate
+  - jekyll-sitemap
+permalink: posts/:slug

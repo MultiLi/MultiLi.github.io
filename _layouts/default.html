@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<html lang="en-us">
-
-  {% include head.html %}
-
-  <body>
-
-    {% include sidebar.html %}
-
-    <div class="content container">
-      {{ content }}
+<!doctype html>
+<html lang="en">
+{% include head.html %}
+<body>
+  <main role="main">
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        {% include navigation.html %}
+        {{ content }}
+        {% include footer.html %}
+      </div>
     </div>
-
-  </body>
+  </main>
+  {% include javascripts.html %}
+</body>
 </html>

@@ -1,10 +1,39 @@
 ---
-layout: default
-title: "404: Page not found"
-permalink: 404.html
+permalink: /404.html
+sitemap: false
 ---
 
-<div class="page">
-  <h1 class="page-title">404: Page not found</h1>
-  <p class="lead">Sorry, we've misplaced that URL or it's pointing to something that doesn't exist. <a href="{{ site.baseurl }}">Head back home</a> to try finding it again.</p>
-</div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{{ site.name }} | Page not found</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% if site.blog_theme == "light" %}
+    {% stylesheet notfound-light %}
+  {% else %}
+    {% stylesheet notfound-dark %}
+  {% endif %}
+</head>
+<body>
+  <main role="main" class="notfound-wrapper">
+    <div class="notfound-content">
+      <h1><a href="{{ '/' | relative_url }}" title="Back to homepage">Chalk</a></h1>
+      <p>
+        Looks like you got lost. Let's get you back to the <a href="{{ '/' | relative_url }}">homepage</a>!
+      </p>
+    </div>
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Cormorant Garamond:700', 'Lato:300,400,700']
+      }
+    });
+  </script>
+</body>
+</html>
