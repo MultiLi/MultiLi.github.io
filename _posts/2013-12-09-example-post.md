@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Example post
-cover: cover.jpg
+title: Day 0
+# cover: cover.jpg
 date:   2016-11-15 18:48:00
 categories: posts
 ---
 
-## Day0
+## Another day has gone
 
 Everything is ready.
