@@ -13,11 +13,8 @@ links:
     url:          http://muan.co
     external:     true
   - name:         GitHub
-    url:          http://github.com/muan
+    url:          http://github.com/MultiLi
     external:     true
-highlighter:      pygments
+highlighter:      rouge
 permalink:        pretty
-markdown:         redcarpet
-redcarpet:
-  extensions:
-    - smart
+markdown:         kramdown
