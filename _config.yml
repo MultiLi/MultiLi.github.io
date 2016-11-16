@@ -9,9 +9,6 @@ google_analytics: # set tracking, remove from /javascripts/basic.js if unwanted.
 links:
   - name:         About
     url:          /about
-  - name:         Blog
-    url:          http://muan.co
-    external:     true
   - name:         GitHub
     url:          http://github.com/MultiLi
     external:     true
