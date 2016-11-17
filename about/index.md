@@ -3,4 +3,7 @@ layout: default
 title: About
 ---
 
-## Who I am.
+Who am I
+======
+
+I'm a Master student studying computer science at UC San Diego.
