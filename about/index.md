@@ -3,4 +3,4 @@ layout: default
 title: About
 ---
 
-## Who I am
+## Who I am.
