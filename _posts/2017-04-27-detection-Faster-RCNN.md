@@ -4,9 +4,7 @@ title: Faster RCNN Reading Notes
 ---
 
 The search for region proposals is not learnable, and running on CPU, which is computationally ineffective. To improve the performance, and to make the whole pipeline end-to-end, taking only images as input,  propose a new convolutional structure, **R**egion **P**roposal **N**etwork, which together with Fast RCNN constitute the Faster RCNN.  The weights of the ConvNet are shared between RPN and Fast RCNN.
-
 ### Region Proposal Network
-
 + Fully convolutional. Taking whole images as input, and outputting region proposals in different scale and aspect ratio.
 + For the last few layers (grouped as a mini-netowork) that take the output of last shared convolutional layer (so called feature map) as input:
   + **Local feature**: Each sliding window of the input is processed and mapped  to low dimensional feature vector, which is inferred informative in determining both the existance and location of b-box and to which class it belongs. The intuition behind is, even the size of each sliding window is pretty small (3 $\times$ 3 in the paper), due to the deep structure of the ConvNet, it has a broad receptive field (almost cover the whole input image) that potential to carry corresponding information.
@@ -23,7 +21,6 @@ The search for region proposals is not learnable, and running on CPU, which is c
   + Others do not count; thus wouldn't influence the training.
 
 ### Pipeline
-
 + **Train**:
   + Sampling the positive and negative anchors that have a ratio of up to 1:1
   + New layers (mini-network) are randomly initialized while others are pretrained on ImageNet
