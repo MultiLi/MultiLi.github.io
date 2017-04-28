@@ -31,7 +31,7 @@ Replace the regular pooling layer, in which the size of the kernel is fixed and 
 + **Acceleration**:
 
   + Single pass through ConvNet (discussed in detail above).
-  + SVD the fully-connected layer $W \approx U \sum_t V^T$ , so that the number of parameter is reduced from $u\times v$ to $t(u+v)$.
+  + SVD the fully-connected layer \\(W \approx U \sum_t V^T\\) , so that the number of parameter is reduced from $u\times v$ to $t(u+v)$.
   + End-to-end (discussed in detail above), no extra storage needed to keep the extracted features.
   + To speed up the backpropagation, introducing a hierarchical sampling strategy, in which N images are firstly sampled and then $\frac{R}{N}$ ROIs in each image (R, the number of ROIs, here corresponds to the batch size in machine learning terminalogy).
 
