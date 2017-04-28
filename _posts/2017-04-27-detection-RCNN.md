@@ -1,9 +1,7 @@
 ---
 layout: post
-title: RCNN Reading Notes
+title: R-CNN Reading Notes
 ---
-
-# R-CNN
 
 ## Components
 
