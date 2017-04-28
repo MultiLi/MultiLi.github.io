@@ -1,6 +1,6 @@
 ---
 layout: post
-title: R-CNN Reading Notes
+title: 1. R-CNN Reading Notes
 ---
 
 ### Components

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Faster RCNN Reading Notes
+title: 3. Faster RCNN Reading Notes
 ---
 
 The search for region proposals is not learnable, and running on CPU, which is computationally ineffective. To improve the performance, and to make the whole pipeline end-to-end, taking only images as input,  propose a new convolutional structure, **R**egion **P**roposal **N**etwork, which together with Fast RCNN constitute the Faster RCNN.  The weights of the ConvNet are shared between RPN and Fast RCNN.

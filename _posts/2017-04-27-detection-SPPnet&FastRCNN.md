@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SPPnet and Fast RCNN Reading Notes
+title: 2.SPPnet and Fast RCNN Reading Notes
 ---
 
 ### Novel Idea of SPPnet
