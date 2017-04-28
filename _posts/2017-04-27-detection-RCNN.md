@@ -26,13 +26,13 @@ title: R-CNN Reading Notes
 
 ### Pipeline
 + **Train**
- + Pretrain the ConvNet on ImageNet (with a redundant softmax layer removed later)
- + Region proposal and preprocessing (warping to fit the ConvNet)
- + Fine-tune the ConvNet on training set (with a redundant softmax layer removed later)
- + Train the Linear SVM on training set (class-specific, on top of the ConvNet)
- + Train the b-box regressor based on the features and the ground truth (based on the region proposal and feature extractor, class-specific)
+  + Pretrain the ConvNet on ImageNet (with a redundant softmax layer removed later)
+  + Region proposal and preprocessing (warping to fit the ConvNet)
+  + Fine-tune the ConvNet on training set (with a redundant softmax layer removed later)
+  + Train the Linear SVM on training set (class-specific, on top of the ConvNet)
+  + Train the b-box regressor based on the features and the ground truth (based on the region proposal and feature extractor, class-specific)
 + **Test**
- + Region proposal and preprocessing (Selective search)
- + Feature Extraction (ConvNet, dependent on region proposal)
- + Classification (Linear SVM, dependent on all 2 above)
- + B-box refinement (B-box regressor, dependent on all 3 above)
+  + Region proposal and preprocessing (Selective search)
+  + Feature Extraction (ConvNet, dependent on region proposal)
+  + Classification (Linear SVM, dependent on all 2 above)
+  + B-box refinement (B-box regressor, dependent on all 3 above)
