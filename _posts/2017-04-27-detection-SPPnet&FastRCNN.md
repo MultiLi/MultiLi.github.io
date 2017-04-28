@@ -3,17 +3,17 @@ layout: post
 title: SPPnet and Fast RCNN Reading Notes
 ---
 
-## Novel Idea of SPPnet
+### Novel Idea of SPPnet
 
 Replace the regular pooling layer, in which the size of the kernel is fixed and the output depends on the input, with a **S**patial **P**aramid **P**ooling (SPP) layer, in which, on the contrary, the size of the kernel depends on the input and the output is fixed. Consequently, the input size of the final fully-connected layer can be determined in advance, thus the network is empowered to deal with arbitrary-size input.
 
-## Spatial Paramid Pooling Layer
+### Spatial Paramid Pooling Layer
 
 + Fixed output size
 + Multi-scale pooling
 + Size of Receptive field proportional to the input
 
-## General Improvements of Fast RCNN
+### General Improvements of Fast RCNN
 
 + **Arbitraty-size input**:
 
@@ -33,9 +33,9 @@ Replace the regular pooling layer, in which the size of the kernel is fixed and 
   + Single pass through ConvNet (discussed in detail above).
   + SVD the fully-connected layer \\(W \approx U \sum_t V^T\\) , so that the number of parameter is reduced from $u\times v$ to $t(u+v)$.
   + End-to-end (discussed in detail above), no extra storage needed to keep the extracted features.
-  + To speed up the backpropagation, introducing a hierarchical sampling strategy, in which N images are firstly sampled and then $\frac{R}{N}$ ROIs in each image (R, the number of ROIs, here corresponds to the batch size in machine learning terminalogy).
+  + To speed up the backpropagation, introducing a hierarchical sampling strategy, in which N images are firstly sampled and then $\frac{R}{N}$ ROIs in each image (R, the number of ROIs, here corresponds to the batch size in machine learning terminology).
 
-## Pipeline ##
+### Pipeline
 
 + Train
   + For each image, conducting selective search and series of post-processing and filter methods to get some region proposals.

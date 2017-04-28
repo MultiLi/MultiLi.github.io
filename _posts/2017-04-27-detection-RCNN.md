@@ -3,7 +3,7 @@ layout: post
 title: R-CNN Reading Notes
 ---
 
-## Components
+### Components
 
 + **Region Proposal**:
 
@@ -33,7 +33,7 @@ title: R-CNN Reading Notes
   + Coordinates in log scale
   + Trained to optimize the selective search result and increase the IOU with ground truth
 
-## Pipeline
+### Pipeline
 
 + **Train**
  + Pretrain the ConvNet on ImageNet (with a redundant softmax layer removed later)
